@@ -1,0 +1,467 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    direction: rtl;
+
+}
+body{
+    height: 5000px;
+}
+
+/***************page-1*******************/
+.page-1 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(s.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+header {
+    width: 100%;
+    box-shadow: 0 0 15px black;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.5s;
+    z-index: 99;
+    position: fixed;
+}
+
+header:hover {
+    box-shadow: 0 0 0px black;
+}
+
+header nav {
+    padding: 0.7em 1em;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+header:hover nav {
+    box-shadow: 0 0 30px black;
+    transform: translate(0, 30%);
+}
+
+header nav a {
+    display: inline-block;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: black;
+    text-shadow: 0 0 15px white;
+    transition: 0.5s;
+}
+
+header nav a:hover {
+    transform: scale(1.5);
+    color: #3498db;
+    text-shadow: 0 0 15px #3498db;
+}
+
+.page-1 .container-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.page-1 .container-1 h1 {
+    font-size: 5em;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 15px black;
+}
+
+.page-1 .container-1 p {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #3498db;
+    text-shadow: 0 0 5px black;
+    margin-top: 0.2em;
+
+}
+
+.container-2 {
+    position: fixed;
+    top: -1.5%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1d325f;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: 0.7s;
+
+}
+
+.container-2 .information-inputs {
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.container-2 .information-inputs input {
+    width: 100%;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px white;
+    color: white;
+    font-weight: 500;
+
+}
+
+.container-2 .information-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+
+}
+
+.container-2 .information-text p {
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0.5;
+    margin: 1.5em 0;
+}
+
+.container-2 .information-text h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0.5em 0;
+    position: relative;
+    padding: 0.2em 0.3em;
+    transition: 0.5s;
+    color: white;
+
+}
+
+.container-2 .information-text .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+
+}
+
+.container-2 .information-text .links a {
+    display: inline-block;
+    font-size: 1.7em;
+    color: white;
+    padding: 0.3em 0.7em;
+}
+
+.container-2 .information-text .links a:last-child {
+    background-color: #01e675;
+    transition: 0.5s;
+}
+
+.container-2 .information-text .links a:hover:last-child {
+    box-shadow: 0 0 30px #01e675;
+}
+
+.container-2 .information-text .links a:first-child {
+    background-color: #118dd5;
+    transition: 0.5s;
+}
+
+.container-2 .information-text .links a:hover:first-child {
+    box-shadow: 0 0 30px #118dd5;
+}
+
+
+
+
+
+
+.container-2 .information h2:hover {
+    color: white;
+}
+
+.container-2 .information-text h2:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 30px white;
+    border-radius: 1.5em;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scaley(0);
+}
+
+.container-2 .information-text h2:hover {
+    color: #118DD5;
+    text-shadow: 0 0 20px #118DD5;
+
+}
+
+.container-2 .information-text h2:hover:after {
+    transform: scaley(1);
+}
+
+.menu-btn {
+    z-index: 2;
+    position: fixed;
+    top: 0.2em;
+    right: 0.85em;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: #118DD5;
+    line-height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 3px;
+    z-index: 1000;
+}
+
+.page-1 input#active {
+    display: none;
+}
+
+#active:checked~.container-2 {
+    clip-path: circle(75%);
+
+}
+
+#active:checked~.menu-btn i:before {
+    content: "\f00d";
+}
+
+/***************page-2*******************/
+.page-2 {
+    width: 100%;
+    height: 50vh;
+
+    z-index: -1;
+
+}
+
+.page-2 .caption-card-1 {
+    background-image: linear-gradient(390deg, #118DD5, transparent, #118DD5);
+    width: 60%;
+    padding: 0.9em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em auto ;
+    border-radius: 1em;
+    box-shadow: 0 0 30px #118dd5;
+    position: relative;
+    z-index: -10;
+    transition: 0.5s;
+  
+
+}
+.page-2 .caption-card-1 p{
+    font-size: 1.7em;
+}
+
+
+.information-page2 {
+
+    width: 100%;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15em;
+    text-align: center;
+    flex-direction: column;
+}
+
+.information-page2 h2 {
+    width: 10em;
+    font-size: 3.5em;
+    font-weight: 100;
+    color: #118dd5;
+    position: relative;
+    margin-bottom: 0.9em;
+}
+
+.information-page2 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+    width: 100%;
+    height: 0.07em;
+    background-color: #118dd5;
+    border-radius: 100%;
+    opacity: 0.6;
+
+}
+
+.information-page2 .p-1 {
+    font-size: 1.5em;
+    opacity: 0.7;
+    margin-bottom: 0.7em;
+}
+
+.information-page2 .p-2 {
+    font-size: 2em;
+    width: 70%;
+    margin: auto;
+}
+
+/****************page-3******************/
+.page-3 {
+    margin-top: 24em;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page-3 .container-3 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2em 0.2em;
+    box-shadow: 0 0 30px #118dd5;
+    border-radius: 1.2em;
+    color: white;
+}
+
+.page-3 .container-3 h3 {
+    font-size: 2em;
+}
+
+.page-3 .container-3 input {
+    width: 95%;
+    height: 3em;
+    border: solid 2px rgba(0, 0, 0, 0.336);
+    margin: 1.1em auto;
+    padding-right: 0.5em;
+    font-weight: 700;
+
+}
+
+.page-3 .container-3 select {
+    margin: 1.1em auto;
+    width: 95%;
+    height: 3em;
+}
+
+.page-3 .container-3 h4 {
+    text-align: right;
+    margin-right: 0.7em;
+    font-size: 1.2em;
+}
+
+.page-3 .container-3 .chiked {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.page-3 .container-3 .chiked .ch-1 {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.page-3 .container-3 .chiked .ch-1 p {
+    width: fit-content;
+    margin-right: -5em;
+    font-size: 1.2em;
+
+}
+
+.page-3 .container-3 .chiked .ch-1 input {
+    width: 2em;
+
+}
+
+.page-3 .container-3 textarea {
+    width: 90%;
+    height: 25em;
+    padding: 0.2em 0.5em;
+    margin: auto;
+}
+
+.page-4 {
+    width: 100%;
+    height: 30vh;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+.page-4 .content {
+    width: 80%;
+    height: 50%;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1.2em;
+}
+
+.page-4 .content  img{
+    width: 5em;
+    transition: 0.5s;
+}
+.page-4 .content:hover img{
+    filter: blur(5px);
+} 
+.page-4 .content  img:hover{
+    transform: rotate(360deg) scale(1.5);
+    filter: blur(0px);
+
+}
+.page-5{
+    width: 100%;
+    height: 30em;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page-5 h1{
+margin: 1.5em 0;
+font-size: 3.5em;
+color: #118dd5;
+}
+.page-5 map{
+    
+}
+iframe{
+    width: 90em;
+    clip-path: circle(50% at 50% 50%);
+    transition: 0.5s;
+}
+iframe:hover{
+    clip-path: circle(70.7% at 50% 50%);
+}
